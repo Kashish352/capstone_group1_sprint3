@@ -1,0 +1,146 @@
+/* Container */
+.thank-you-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #0070f3, #005bb5);
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  /* Content */
+  .thank-you-content {
+    animation: fadeIn 1s ease-out;
+  }
+  
+  .thank-you-content h1 {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+  }
+  
+  .thank-you-content p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    line-height: 1.6;
+  }
+  
+  /* Back to Home Button */
+  .back-to-home {
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    background: white;
+    color: #0070f3;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .back-to-home:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+  }
+  
+  /* Checkmark Animation */
+  .thank-you-animation {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .checkmark {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: scaleUp 0.5s ease-in-out forwards;
+  }
+  
+  .checkmark-circle {
+    width: 100px;
+    height: 100px;
+    border: 3px solid #0070f3;
+    border-radius: 50%;
+    position: absolute;
+    animation: circleGrow 0.6s ease-in-out forwards;
+  }
+  
+  .checkmark-stem {
+    position: absolute;
+    width: 6px;
+    height: 30px;
+    background: #0070f3;
+    border-radius: 3px;
+    transform: rotate(45deg) translate(-50%, 0);
+    animation: stemDraw 0.3s 0.5s ease-in-out forwards;
+    opacity: 0;
+  }
+  
+  .checkmark-kick {
+    position: absolute;
+    width: 6px;
+    height: 15px;
+    background: #0070f3;
+    border-radius: 3px;
+    transform: rotate(-45deg) translate(0, -50%);
+    animation: kickDraw 0.3s 0.8s ease-in-out forwards;
+    opacity: 0;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes scaleUp {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes circleGrow {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes stemDraw {
+    from {
+      transform: rotate(45deg) translate(-50%, 0) scaleY(0);
+      opacity: 0;
+    }
+    to {
+      transform: rotate(45deg) translate(-50%, 0) scaleY(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes kickDraw {
+    from {
+      transform: rotate(-45deg) translate(0, -50%) scaleY(0);
+      opacity: 0;
+    }
+    to {
+      transform: rotate(-45deg) translate(0, -50%) scaleY(1);
+      opacity: 1;
+    }
+  }
+  
